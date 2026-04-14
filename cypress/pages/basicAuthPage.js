@@ -3,7 +3,7 @@ class basicAuthPage {
 
 
  clickBasicAuth() {
-    cy.visit('https://the-internet.herokuapp.com/basic_auth', {
+    cy.visit('/basic_auth', {
       auth: {
         username: Cypress.env('username'),
         password: Cypress.env('password')

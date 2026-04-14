@@ -3,7 +3,7 @@ class DropDownPage {
 
 
     visit() {
-        cy.visit('https://the-internet.herokuapp.com/dropdown')
+        cy.visit('/dropdown')
 }
 
     selectFirstOption() {

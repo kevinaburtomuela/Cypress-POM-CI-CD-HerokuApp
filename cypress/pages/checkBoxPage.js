@@ -1,14 +1,22 @@
-import { checkBoxSelectors } from '../selectors/checkBoxSelector'
+import { checkBoxSelector } from '../selectors/checkBoxSelector'
 
 class CheckBoxPage {
 
 
     visit() {
-        cy.visit('https://the-internet.herokuapp.com/checkboxes')
+        cy.visit('/checkboxes')
+}
+    checkAllOptions(){
+        cy.get(checkBoxSelector.firstCheckBox).check()
+        cy.get(checkBoxSelector.lastCheckBox).check()
+    }
+
+    unCheckAllOptions(){
+        cy.get(checkBoxSelector.firstCheckBox).uncheck()
+        cy.get(checkBoxSelector.lastCheckBox).uncheck()
+    }
+
+
 }
 
-
-
-}
-
-export default new CheckBoxPagePage()
+export default new CheckBoxPage()
