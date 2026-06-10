@@ -1,21 +1,23 @@
 const { defineConfig } = require("cypress");
 
 module.exports = defineConfig({
-  e2e: {
-    setupNodeEvents(on, config) {
-      // implement node event listeners here
-    },
+  reporter: 'mochawesome',
+  reporterOptions: {
+    reportDir: 'cypress/reports',
+    overwrite: false,
+    html: true,
+    json: true
+  },
 
-    baseUrl: 'https://the-internet.herokuapp.com',
+  e2e: {
+    baseUrl: "https://the-internet.herokuapp.com",
 
     retries: {
-      runMode: 0,   // cypress run
-      openMode: 0   // cypress open
+      runMode: 0,
+      openMode: 0
     },
 
-    env: {
-      username: 'admin',
-      password: 'admin'
-    }
-  }
+    setupNodeEvents(on, config) {
+    },
+  },
 });

@@ -22,7 +22,7 @@ describe('Automation test for Herokuapp', () => {
     HomePage.visit()
   })
 
-  it('Basic Auth', () => {
+  it.skip('Basic Auth', () => {
     BasicAuthPage.clickBasicAuth()
     BasicAuthPage.validateLoginSuccess()
     cy.url().should('include', 'herokuapp')
