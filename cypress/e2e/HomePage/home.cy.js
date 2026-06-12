@@ -1,5 +1,4 @@
 import HomePage from '../../pages/homePage'
-import BasicAuthPage from '../../pages/basicAuthPage'
 import DropDownPage from '../../pages/dropDownPage'
 import CheckBoxPage from '../../pages/checkBoxPage'
 import SliderPage from '../../pages/sliderPage'
@@ -22,70 +21,64 @@ describe('Automation test for Herokuapp', () => {
     HomePage.visit()
   })
 
-  it.skip('Basic Auth', () => {
-    BasicAuthPage.clickBasicAuth()
-    BasicAuthPage.validateLoginSuccess()
-    cy.url().should('include', 'herokuapp')
-  })
-
-  it('Drop down - first option', () => {
+  it('Test case 1 - Drop down - first option', () => {
     DropDownPage.visit()
     DropDownPage.selectFirstOption()
   })
 
-    it('Drop down - Last option', () => {
+    it('Test case 2 - Drop down - Last option', () => {
     DropDownPage.visit()
     DropDownPage.selectLastOption()
   })
 
-    it('Checkbox - Check all options', () => {
+    it('Test case 3 - Checkbox - Check all options', () => {
     CheckBoxPage.visit()    
     cy.url().should('include', 'checkboxes')
     CheckBoxPage.unCheckAllOptions()
   })
 
-   it('Checkbox - Uncheck all options', () => {
+   it('Test case 4 - Checkbox - Uncheck all options', () => {
     CheckBoxPage.visit()    
     cy.url().should('include', 'checkboxes')
     CheckBoxPage.checkAllOptions()
   })
 
-    it('Slider - Half value', () => {
+    it('Test case 5 - Slider - Half value', () => {
     SliderPage.visit()
     SliderPage.sliderHalfMove()
   })
 
-    it('Slider - Complete value', () => {
+    it('Test case 6 - Slider - Complete value', () => {
     SliderPage.visit()
     SliderPage.sliderCompleteMove()
   })
 
-    it('Input number - Select the number 10', () => {
+    it('Test case 7 - Input number - Select the number 10', () => {
     InputPage.visit()
     InputPage.inputANumber()
   })
 
-    it('Add a new element', () => {
+    it('Test case 8 - Add a new element', () => {
     AddRemovePage.visit()
     AddRemovePage.addElement()
   })
-    it('Remove an element', () => {
+    it('Test case 9 - Remove an element', () => {
     AddRemovePage.visit()
     AddRemovePage.removeElement()
   })
 
-    it('Floating menu', () => {
+    it('Test case 10 - Floating menu', () => {
     FloatingMenuPage.visit()
     FloatingMenuPage.selectFlotingMenu()
   })
 
-    it('Fill a login form', () => {
+    it('Test case 11 - Fill a login form', () => {
     LoginFormPage.visit()
     LoginFormPage.loginSuccess()
     SecurePage.validatelogin()
   })
 
-    it('Logout secure area', () => {
+    it('Test case 12 - Logout secure area', () => {
     LoginFormPage.visit()
     LoginFormPage.loginSuccess()
     SecurePage.validatelogin()
@@ -93,13 +86,13 @@ describe('Automation test for Herokuapp', () => {
     LoginFormPage.validateLogout()
   })
 
-    it('File download', () => {
+    it('Test case 13 - File download', () => {
     DownloadPage.visit()
     DownloadPage.downloadImage()
     DownloadPage.validateImage()
   })
 
-    it('File upload', () => {
+    it('Test case 14 - File upload', () => {
     UploadPage.visit()
     UploadPage.uploadImage()    
     UploadPage.validateImage()
