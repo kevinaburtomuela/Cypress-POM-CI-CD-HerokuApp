@@ -1,4 +1,4 @@
-import { inputSelector } from '../selectors/inputSelector'
+import { inputSelector } from '../selectors/InputSelector'
 
 class InputPage {
 
