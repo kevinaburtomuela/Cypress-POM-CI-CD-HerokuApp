@@ -10,7 +10,7 @@ import SecurePage from '../../pages/securePage'
 import UploadPage from '../../pages/uploadPage'
 import DownloadPage from '../../pages/downloadPage'
 
-describe('Automation test for Herokuapp', () => {
+describe('Automation test for Herokuapp with CI/CD', () => {
 
   beforeEach(() => {
     cy.intercept('https://*.optimizely.com/**', {
